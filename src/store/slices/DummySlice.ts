@@ -5,7 +5,7 @@ export const postAPI = createApi({
   reducerPath: "postAPI",
   baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com" }),
   endpoints: ({ query }) => ({
-    getAllPosts: query<PostType, undefined>({ query: () => "/posts" })
+    getAllPosts: query<PostType, void>({ query: () => "/posts" })
   })
 });
 
